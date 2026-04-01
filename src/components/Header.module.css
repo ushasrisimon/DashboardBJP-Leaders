@@ -1,0 +1,99 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background: white;
+  padding: 1.5rem 3rem;
+  /* subtle shadow matching the white clean UI */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+.headerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.searchContainer {
+  display: flex;
+  align-items: center;
+  background-color: var(--surface-container-low); /* #f3f4f5 */
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-lg);
+  width: 400px;
+  gap: 0.75rem;
+}
+
+.searchIcon {
+  color: #8c8c8c;
+}
+
+.searchInput {
+  border: none;
+  background: transparent;
+  outline: none;
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--on-surface);
+}
+
+.searchInput::placeholder {
+  color: #8c8c8c;
+}
+
+.actionsGroup {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.iconBtn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  color: #57636e; /* slate grey */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease;
+}
+
+.iconBtn:hover {
+  color: var(--primary);
+}
+
+.notificationDot {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 8px;
+  height: 8px;
+  background-color: #b76e00; /* Saffron dot */
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.divider {
+  height: 24px;
+  width: 1px;
+  background-color: var(--surface-container-highest); /* e1e3e4 */
+}
+
+.quickActionBtn {
+  background-color: #c06500;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.65rem 1.25rem;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.8rem;
+  cursor: pointer;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.quickActionBtn:hover {
+  background-color: #a84200;
+}

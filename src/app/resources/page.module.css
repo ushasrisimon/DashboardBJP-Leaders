@@ -1,0 +1,562 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem 0 3rem 0;
+}
+
+/* Page Header */
+.pageHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.headerLeft {
+  display: flex;
+  flex-direction: column;
+}
+
+.breadcrumb {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #ca7618;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.pageTitle {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--on-surface);
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+.pageSub {
+  font-size: 1rem;
+  color: var(--on-surface-variant);
+  max-width: 600px;
+  line-height: 1.5;
+}
+
+.headerActions {
+  display: flex;
+  gap: 1rem;
+}
+
+.ghostBtn {
+  background: white;
+  border: 1px solid #e1e3e4;
+  color: #ca7618;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 0.85rem 1.5rem;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+  transition: background 0.2s;
+}
+
+.ghostBtn:hover {
+  background: #fdf3e8;
+}
+
+.primaryBtn {
+  background: #a15c03; /* Deep brown/orange */
+  color: white;
+  border: none;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 0.85rem 1.75rem;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(161, 92, 3, 0.2);
+  transition: opacity 0.2s;
+}
+
+.primaryBtn:hover {
+  opacity: 0.9;
+}
+
+
+/* MAIN SPLIT */
+.mainSplit {
+  display: flex;
+  gap: 2rem;
+  align-items: stretch;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.sectionTitleBlock {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.sectionIcon {
+  color: #8f4e00;
+}
+
+.sectionTitle {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--on-surface);
+}
+
+.pdfTag {
+  background: #f3f4f5;
+  color: #a1a1aa;
+  font-size: 0.65rem;
+  font-weight: 800;
+  padding: 0.25rem 0.6rem;
+  border-radius: var(--radius-sm);
+  letter-spacing: 0.05em;
+}
+
+
+/* LEFT: Manifestos */
+.manifestosCol {
+  flex: 0.35;
+  display: flex;
+  flex-direction: column;
+}
+
+.manifestoList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.docCard {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.02);
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.docCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+.pdfIconBox {
+  flex-shrink: 0;
+  background: #fee2e2;
+  color: #ef4444;
+  width: 40px;
+  height: 48px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.75rem;
+}
+
+.docInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.docTitle {
+  font-weight: 800;
+  font-size: 0.95rem;
+  color: var(--on-surface);
+  line-height: 1.3;
+}
+
+.docMeta {
+  font-size: 0.75rem;
+  color: var(--on-surface-variant);
+}
+
+.addDocBtn {
+  margin-top: 1rem;
+  background: transparent;
+  border: 2px dashed #e1e3e4;
+  border-radius: var(--radius-sm);
+  padding: 1rem;
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: #a1a1aa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.addDocBtn:hover {
+  border-color: #ca7618;
+  color: #ca7618;
+  background: #fffdfa;
+}
+
+
+/* RIGHT: Press Assets */
+.pressCol {
+  flex: 0.65;
+  display: flex;
+  flex-direction: column;
+}
+
+.viewToggles {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.viewIcon {
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.viewIcon.active {
+  background: #f1f2f3;
+  color: var(--on-surface);
+}
+
+.viewIcon.inactive {
+  color: #a1a1aa;
+}
+
+.assetGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.assetCard {
+  background: white;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  display: flex;
+  flex-direction: column;
+}
+
+.assetVisual {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  background: #fdf3e8; /* Default for vector assets */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.assetImg {
+  object-fit: cover;
+}
+
+.assetDetails {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.assetName {
+  font-weight: 800;
+  font-size: 0.85rem;
+  color: var(--on-surface);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.assetMeta {
+  font-size: 0.65rem;
+  color: var(--on-surface-variant);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+.uploadCard {
+  background: transparent;
+  border: 2px dashed #e1e3e4;
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 180px;
+  cursor: pointer;
+  color: #a1a1aa;
+  transition: all 0.2s;
+}
+
+.uploadCard:hover {
+  border-color: #ca7618;
+  color: #ca7618;
+  background: #fffdfa;
+}
+
+.uploadText {
+  font-weight: 700;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+
+/* BOTTOM: Campaign Material */
+.campaignSection {
+  margin-top: 1rem;
+}
+
+.sectionLink {
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: #ca7618;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.campaignRow {
+  display: flex;
+  gap: 1.5rem;
+  position: relative;
+}
+
+.campCard {
+  flex: 1;
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+  display: flex;
+  flex-direction: column;
+}
+
+.campVisual {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/3;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  margin-bottom: 1.25rem;
+  background: #fdf3e8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Quote visual custom layout */
+.quoteBlock {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.quoteText {
+  font-style: italic;
+  font-weight: 700;
+  color: #a15c03;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.playOverlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255,255,255,0.9);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ca7618;
+}
+
+.durationBadge {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  background: rgba(0,0,0,0.7);
+  color: white;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+}
+
+.campInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex: 1;
+}
+
+.campTitle {
+  font-weight: 800;
+  font-size: 0.95rem;
+  color: var(--on-surface);
+  line-height: 1.3;
+}
+
+.campSub {
+  font-size: 0.75rem;
+  color: var(--on-surface-variant);
+}
+
+.campFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.campActionIcon {
+  color: var(--on-surface-variant);
+  cursor: pointer;
+}
+
+.updateBtn {
+  background: #fdf3e8;
+  color: #ca7618;
+  border: none;
+  font-weight: 800;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.6rem 1rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.updateBtn:hover {
+  background: #fbe6d2;
+}
+
+/* Floating Recently Shared Component */
+.floatingWidget {
+  position: absolute;
+  bottom: 60px;
+  right: -20px;
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+  z-index: 10;
+}
+
+.widgetAvatars {
+  display: flex;
+  align-items: center;
+}
+
+.wAvatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid white;
+  margin-left: -10px;
+  position: relative;
+}
+
+.wAvatar:first-child {
+  margin-left: 0;
+}
+
+.wAvatarCount {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #e78820;
+  color: white;
+  border: 2px solid white;
+  margin-left: -10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: 800;
+  z-index: 3;
+}
+
+.widgetText {
+  display: flex;
+  flex-direction: column;
+}
+
+.wTitle {
+  font-weight: 800;
+  font-size: 0.85rem;
+  color: var(--on-surface);
+}
+
+.wSub {
+  font-size: 0.7rem;
+  color: var(--on-surface-variant);
+}
+
+.wSyncBtn {
+  background: #fdf3e8;
+  color: #ca7618;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+@media (max-width: 1400px) {
+  .assetGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 1100px) {
+  .mainSplit {
+    flex-direction: column;
+  }
+  .campaignRow {
+    flex-wrap: wrap;
+  }
+  .campCard {
+    min-width: calc(50% - 1.5rem);
+  }
+}

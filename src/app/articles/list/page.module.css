@@ -1,0 +1,515 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  gap: 1.5rem;
+  padding-bottom: 6rem; /* Space for sticky footer */
+}
+
+/* Page Header Structure */
+.headerBlock {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 1rem;
+}
+
+.headerText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.headerSub {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: #8c8c8c;
+  font-weight: 500;
+}
+
+.headerTitle {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--on-surface);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.createBtn {
+  background: linear-gradient(135deg, #e78820 0%, #ca7618 100%);
+  color: white;
+  border: none;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.95rem;
+  padding: 0.85rem 1.75rem;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(202, 118, 24, 0.25);
+  transition: opacity 0.2s;
+}
+
+.createBtn:hover {
+  opacity: 0.9;
+}
+
+/* Filters Card */
+.filtersCard {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 1.5rem 2rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.filtersGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.filterGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.filterLabel {
+  font-size: 0.65rem;
+  font-weight: 800;
+  color: #57636e;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.formSelectWrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.formSelect {
+  width: 100%;
+  appearance: none;
+  background: #f4f5f6;
+  border: 1px solid transparent;
+  color: var(--on-surface);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.8rem 2.5rem 0.8rem 1rem;
+  border-radius: 6px;
+  outline: none;
+  cursor: pointer;
+}
+
+.selectIcon {
+  position: absolute;
+  right: 1rem;
+  color: #8c8c8c;
+  pointer-events: none;
+}
+
+.searchRow {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.searchWrap {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.searchIconWrapper {
+  position: absolute;
+  left: 1rem;
+  color: #8c8c8c;
+}
+
+.searchInput {
+  width: 100%;
+  background: #f4f5f6;
+  border: 1px solid transparent;
+  color: var(--on-surface);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  padding: 0.8rem 1rem 0.8rem 2.5rem;
+  border-radius: 6px;
+  outline: none;
+}
+.searchInput::placeholder {
+  color: #a1a1aa;
+}
+
+.clearFiltersBtn {
+  background: transparent;
+  border: none;
+  color: #a84200;
+  font-weight: 800;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+.clearFiltersBtn:hover {
+  text-decoration: underline;
+}
+
+/* Data Table Card */
+.tableCard {
+  background: white;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.tableWrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.dataTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.dataTable th {
+  text-align: left;
+  padding: 1.5rem 2rem 1rem 2rem;
+  background: #fcfbf9;
+  color: #57636e;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid #e1e3e4;
+}
+
+.dataTable td {
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid #f4f5f6;
+  vertical-align: middle;
+}
+
+/* Table Cells Specifics */
+.mediaThumb {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  background: #191c1d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Fallback cursive graphic logic directly in CSS */
+.cursiveRally {
+  font-family: 'Brush Script MT', cursive, sans-serif;
+  font-size: 1.1rem;
+  color: #f1f2f3;
+  transform: rotate(-10deg);
+}
+.gradientDummyBlue {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.gradientDummyGrey {
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cellHeadline {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.rowTitle {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.95rem;
+  color: #191c1d;
+  line-height: 1.3;
+}
+
+.rowDate {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  color: #8c8c8c;
+}
+
+.tagsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.35rem;
+}
+
+.tagPill {
+  background: #f4f5f6;
+  color: #57636e;
+  font-size: 0.65rem;
+  font-weight: 800;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+}
+
+.tagsInline {
+  display: flex;
+  gap: 0.35rem;
+}
+
+/* Avatar Stack Logic */
+.avatarStack {
+  display: flex;
+  align-items: center;
+}
+
+.avatarItem {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid white;
+  background: #191c1d;
+  margin-left: -8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  overflow: hidden;
+}
+
+.avatarItem:first-child {
+  margin-left: 0;
+}
+
+.avatarMore {
+  background: #e1e3e4;
+  color: #57636e;
+  font-size: 0.65rem;
+  font-weight: 800;
+}
+
+/* Status Pills */
+.statusPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 20px;
+  font-size: 0.65rem;
+  font-family: var(--font-display);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.statusPublished {
+  background-color: #e5f5e5;
+  color: #056e00;
+}
+.statusPublished .statusDot {
+  background-color: #16a34a;
+}
+
+.statusDraft {
+  background-color: #f4f5f6;
+  color: #57636e;
+}
+.statusDraft .statusDot {
+  background-color: #a1a1aa;
+}
+
+.statusDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.actionsCell {
+  display: flex;
+  gap: 1rem;
+}
+
+.actionIcon {
+  color: #a1a1aa;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.actionIcon:hover {
+  color: #57636e;
+}
+
+
+/* Pagination Controls */
+.paginationFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background: #fcfbf9;
+}
+
+.paginationText {
+  font-size: 0.85rem;
+  color: #57636e;
+  font-family: var(--font-body);
+}
+
+.pageControls {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.pageBtn {
+  background: transparent;
+  border: none;
+  color: #57636e;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.9rem;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.pageBtn:hover {
+  background: #f3f4f5;
+  color: #191c1d;
+}
+
+.pageBtnActive {
+  background: #a84200;
+  color: white;
+  border: none;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.9rem;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.pageBtnArrow {
+  background: transparent;
+  border: none;
+  color: #8c8c8c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0 0.5rem;
+}
+
+
+/* Global Floating Status Elements (from Mock) */
+.stickyStatusBlock {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  border-radius: 99px;
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  z-index: 100;
+}
+
+.stickyPill {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.65rem;
+  font-weight: 800;
+  color: #57636e;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.stickyDot {
+  width: 6px;
+  height: 6px;
+  background: #16a34a;
+  border-radius: 50%;
+}
+
+.stickyDivider {
+  width: 1px;
+  height: 14px;
+  background: #e1e3e4;
+}
+
+/* Floating Action Macro Button Bottom Right */
+.macroFloatBtn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 56px;
+  height: 56px;
+  background: #a84200;
+  color: white;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 20px rgba(168, 66, 0, 0.4);
+  cursor: pointer;
+  z-index: 100;
+  transition: transform 0.2s;
+  border: none;
+}
+
+.macroFloatBtn:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 1024px) {
+  .filtersGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .filtersGrid {
+    grid-template-columns: 1fr;
+  }
+  .searchRow {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

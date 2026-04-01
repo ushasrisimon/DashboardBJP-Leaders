@@ -1,0 +1,440 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1000px;
+  background: #fdfaf4; /* Use the cream background matching the screenshot vibe */
+  padding: 2rem 2.5rem;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 4px 30px rgba(0,0,0,0.03);
+}
+
+/* 1. Header */
+.pageHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 2rem;
+}
+
+.breadcrumbs {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #57636e;
+}
+.breadcrumbArrow { margin: 0 0.5rem; color: #191c1d; }
+.breadcrumbDark { color: #191c1d; }
+
+.subtitle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: #57636e;
+  margin-top: 0.5rem;
+}
+
+.activeDot {
+  width: 8px;
+  height: 8px;
+  background-color: #007a00;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.headerActions {
+  display: flex;
+  gap: 1rem;
+}
+
+.btnOutlineGreen {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: white;
+  color: #007a00;
+  border: 1px solid #007a00;
+  border-radius: 6px;
+  padding: 0.75rem 1.5rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.btnSolidSaffron {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #d88100;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.75rem 1.5rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+/* 2. Tabs Ribbon */
+.tabsContainer {
+  display: flex;
+  gap: 2.5rem;
+  border-bottom: 2px solid #e1e3e4;
+  margin-bottom: 3rem;
+}
+
+.tabItem {
+  background: transparent;
+  border: none;
+  color: #57636e;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding-bottom: 1rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.tabActive {
+  color: #c06500;
+}
+.tabActive::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #c06500;
+}
+
+/* 3. Main Grid Layout */
+.mainGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: 3.5rem;
+  margin-bottom: 4rem;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.headerIcons {
+  display: flex;
+  gap: 1rem;
+}
+
+.iconBtn {
+  background: transparent;
+  border: none;
+  color: #191c1d;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.iconBtn:hover { color: #d88100; }
+
+/* Biography Editor */
+.richTextContainer {
+  background: white;
+  border: 1px solid #e1e3e4;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  min-height: 400px;
+}
+
+.richTextToolbar {
+  background: #fdfaf4; /* slight cream to match bg */
+  border-bottom: 1px solid #e1e3e4;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.toolbarBtn {
+  background: transparent;
+  border: none;
+  color: #191c1d;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.toolbarBtn:hover { color: #d88100; }
+
+.richTextArea {
+  flex: 1;
+  border: none;
+  padding: 1.5rem;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: #3b4e60;
+  line-height: 1.6;
+  resize: none;
+  outline: none;
+  background: white;
+}
+
+/* Timeline */
+.reorderBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: transparent;
+  border: none;
+  color: #c06500;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+}
+
+.timelinePathContainer {
+  position: relative;
+  padding-left: 24px;
+}
+
+.verticalAxis {
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: -1px; /* Center with the 24px icons placed at left: -12px */
+  width: 2px;
+  background-color: #e1e3e4;
+  z-index: 1;
+}
+
+.timelineNodeBlock {
+  position: relative;
+  margin-bottom: 2rem;
+  z-index: 2;
+}
+
+.nodeIconSaffronWrapper {
+  position: absolute;
+  left: -37px; /* 24px container shift */
+  top: 8px;
+  background: white;
+  border-radius: 50%;
+}
+.iconFilledSaffron {
+  color: #f59622;
+  fill: white;
+}
+
+.nodeContentFilled {
+  background: #f9fafa;
+  border-radius: 6px;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.nodeYearSaffron {
+  color: #c06500;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.7rem;
+  margin-bottom: 0.25rem;
+}
+
+.nodeTitle {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #191c1d;
+}
+
+.nodeDesc {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: #57636e;
+}
+
+/* Dashed creation node */
+.nodeIconDashedWrapper {
+  position: absolute;
+  left: -37px;
+  top: 10px;
+  background: white;
+  border-radius: 50%;
+  border: 2px dashed #f59622;
+  padding: 2px;
+}
+.iconOutlineSaffron {
+  color: #f59622;
+}
+
+.nodeContentDashed {
+  background: white;
+  border: 1.5px dashed #e1e3e4;
+  border-radius: 6px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.timelineInputRow {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.timelineMiniInput {
+  background: #fdfaf4; /* extremely faint cream */
+  border: 1px solid #f0f1f2;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  outline: none;
+}
+.timelineMiniInput::placeholder { color: #8c8c8c; }
+
+.addTimelineBtn {
+  background: #e1e3e4;
+  color: #191c1d;
+  border: none;
+  border-radius: 4px;
+  padding: 0.75rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.addTimelineBtn:hover { background: #c9cdd0; }
+
+.sectionDivider {
+  height: 1px;
+  background-color: #e1e3e4;
+  margin: 2.5rem 0;
+}
+
+/* Multimedia Hub */
+.miniLabel {
+  font-family: var(--font-display);
+  font-size: 0.65rem;
+  font-weight: 800;
+  color: #57636e;
+  letter-spacing: 0.05em;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.dropZone {
+  background: #f9fafa;
+  border: 2px dashed #e1e3e4;
+  border-radius: 8px;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.uploadCloudCircle {
+  background-color: #f59622;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropZoneText {
+  color: #191c1d;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.videoInputGroup {
+  display: flex;
+  gap: 1rem;
+}
+
+.videoInputWrapper {
+  position: relative;
+  flex: 1;
+}
+
+.linkIconInside {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #57636e;
+}
+
+.videoInputBox {
+  width: 100%;
+  background: #f9fafa;
+  border: none;
+  padding: 1rem 1rem 1rem 2.8rem;
+  border-radius: 6px;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  outline: none;
+}
+.videoInputBox::placeholder { color: #8c8c8c; }
+
+.btnAddGreenSolid {
+  background: #007a00;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0 1.5rem;
+  font-family: var(--font-display);
+  font-weight: 800;
+  cursor: pointer;
+}
+
+/* 4. Footer Utilities */
+.footerGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.footerCard {
+  background: #f4f5f6;
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.footerIconLightBrown {
+  color: #c06500;
+  margin-bottom: 1rem;
+}
+
+.footerCardTitle {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.95rem;
+  color: #57636e;
+  margin-bottom: 0.5rem;
+}
+
+.footerCardDesc {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  color: #8c8c8c;
+  line-height: 1.4;
+}

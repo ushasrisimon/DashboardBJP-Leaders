@@ -1,0 +1,297 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 1. Header */
+.pageHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 2rem;
+}
+
+/* 2. Forms Row */
+.formSplit {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.formCard {
+  background: white;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.formHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.formTitleGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  position: relative;
+  z-index: 2;
+}
+
+.verticalMarkSaffron {
+  width: 6px;
+  height: 24px;
+  background-color: #d88100;
+  border-radius: 4px;
+}
+
+.watermarkIcon {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  z-index: 1;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.inputRow {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.textInput {
+  background: #f4f5f6;
+  border: none;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  padding: 1rem 1.25rem;
+  border-radius: 6px;
+  color: #191c1d;
+  outline: none;
+  width: 100%;
+}
+.textInput::placeholder {
+  color: #8c8c8c;
+}
+
+.selectWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.selectInput {
+  appearance: none;
+  background: #f4f5f6;
+  border: none;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  padding: 1rem 1.25rem;
+  border-radius: 6px;
+  color: #191c1d;
+  outline: none;
+  width: 100%;
+  cursor: pointer;
+}
+
+.selectArrow {
+  position: absolute;
+  right: 1.25rem;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #57636e;
+}
+
+.submitBtnGreen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: #056e00;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 1rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+
+.submitBtnSaffron {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: #f59622;
+  color: #7b310e; /* dark text from image */
+  border: none;
+  border-radius: 6px;
+  padding: 1rem;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1rem;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+
+/* 3. Data Table Widget */
+.tableWidget {
+  background: white;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+}
+
+.tableHeaderSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+
+.tableActions {
+  display: flex;
+  gap: 1rem;
+}
+
+.iconActionBtn {
+  background: transparent;
+  border: none;
+  color: #57636e;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.iconActionBtn:hover {
+  color: #191c1d;
+}
+
+.tableWrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.dataTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.dataTable th {
+  text-align: left;
+  padding: 1.5rem 2rem 1rem 2rem;
+  color: #57636e; /* slate variant */
+  border-bottom: 1px solid var(--surface-container-low);
+  font-weight: 800;
+  letter-spacing: 0.05em;
+}
+
+.dataTable td {
+  padding: 1.5rem 2rem;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  border-bottom: 1px solid var(--surface-container-low);
+  vertical-align: middle;
+}
+
+.typeConstituency {
+  background-color: #fbedd7;
+  color: #c9710f;
+  padding: 0.35rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.65rem;
+  font-family: var(--font-display);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.typeSubRegion {
+  background-color: #e5f5e5;
+  color: #056e00;
+  padding: 0.35rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.65rem;
+  font-family: var(--font-display);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.paginationFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+}
+
+.pageControls {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.pageBtn {
+  background: transparent;
+  border: none;
+  color: #191c1d;
+  font-family: var(--font-display);
+  font-weight: 800;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.pageBtn:hover {
+  background: #f3f4f5;
+}
+
+.pageBtnActive {
+  background: #b76e00;
+  color: white;
+  border: none;
+  font-family: var(--font-display);
+  font-weight: 800;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.pageBtnArrow {
+  background: transparent;
+  border: none;
+  color: #8c8c8c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0 0.5rem;
+}
+.pageBtnArrow:hover {
+  color: #191c1d;
+}

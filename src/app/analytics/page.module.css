@@ -1,0 +1,587 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1rem 0;
+}
+
+/* Header Section */
+.pageHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 0.5rem;
+}
+
+.headerLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.pageTitle {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--on-surface);
+  line-height: 1.1;
+}
+
+.pageSub {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--on-surface-variant);
+}
+
+.headerActions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.actionBtn {
+  background: white;
+  border: 1px solid #e1e3e4;
+  color: var(--on-surface);
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+  transition: all 0.2s;
+}
+
+.actionBtn:hover {
+  background: #f8f9fa;
+  border-color: #d1d5db;
+}
+
+
+/* TOP GRID Section */
+.topGrid {
+  display: flex;
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+/* LEFT: Strategic Map */
+.mapCard {
+  flex: 1.6;
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+  display: flex;
+  flex-direction: column;
+}
+
+.mapHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.cardTitle {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--on-surface);
+}
+
+.mapLegend {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--on-surface-variant);
+  letter-spacing: 0.05em;
+}
+
+.legendDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.legendDot.stronghold { background: #8f4e00; }
+.legendDot.growth { background: #056e00; }
+
+.mapContainer {
+  flex: 1;
+  position: relative;
+  background: #f3f4f5;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  min-height: 480px;
+}
+
+.mapImg {
+  object-fit: cover;
+}
+
+/* Floating Card inside Map */
+.regionFocusCard {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  padding: 1.25rem 1.5rem;
+  border-radius: var(--radius-sm);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.regionLabel {
+  font-size: 0.65rem;
+  font-weight: 800;
+  color: #3b82f6;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.25rem;
+}
+
+.regionName {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #8f4e00;
+  margin-bottom: 0.5rem;
+}
+
+.regionProb {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #b76e00;
+}
+
+/* Map Controls */
+.mapControls {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.mapBtnGroup {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: var(--radius-sm);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.mapControlBtn {
+  background: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--on-surface-variant);
+  border-bottom: 1px solid #f3f4f5;
+  transition: background 0.2s;
+}
+
+.mapControlBtn:last-child {
+  border-bottom: none;
+}
+
+.mapControlBtn:hover {
+  background: #f8f9fa;
+  color: var(--on-surface);
+}
+
+.mapControlBtnSingle {
+  background: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--on-surface-variant);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: background 0.2s;
+}
+
+.mapControlBtnSingle:hover {
+  background: #f8f9fa;
+  color: var(--on-surface);
+}
+
+
+/* RIGHT: Demographics & Strategy */
+.rightCol {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Demographic Breakdown Card */
+.demoCard {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* Custom CSS Donut Chart logic */
+.donutContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem 0 2rem 0;
+  position: relative;
+}
+
+.donutWrapper {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  position: relative;
+  /* Conic gradient representation mapping to specific angles */
+  background: conic-gradient(
+    #f97316 0% 68%,     /* Orange: 68% */
+    #16a34a 68% 90%,    /* Green: 22% */
+    #38bdf8 90% 100%    /* Blue: 10% */
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.donutInner {
+  width: 150px;
+  height: 150px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.donutTotal {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--on-surface);
+  line-height: 1.1;
+  margin-top: 0.5rem;
+}
+
+.donutSub {
+  font-size: 0.65rem;
+  font-weight: 800;
+  color: var(--on-surface-variant);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* Legend items */
+.demoLegend {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.demoLegendItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: var(--radius-sm);
+}
+
+.demoItemLeft {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--on-surface);
+}
+
+.demoItemRight {
+  font-weight: 800;
+  font-size: 0.95rem;
+}
+
+.demoDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.demoDot.orange { background: #f97316; }
+.demoDot.green { background: #16a34a; }
+.demoDot.blue { background: #38bdf8; }
+
+.demoText.orange { color: #c2410c; }
+.demoText.green { color: #15803d; }
+.demoText.blue { color: #0369a1; }
+
+
+/* Strategic Focus Card */
+.strategyCard {
+  background: linear-gradient(135deg, #b76e00 0%, #ca7618 100%);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(202, 118, 24, 0.2);
+}
+
+/* Subtle background overlay graphic */
+.strategyCard::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  width: 150px;
+  height: 150px;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.15) 10%, transparent 10%), 
+                    radial-gradient(circle, rgba(255,255,255,0.15) 10%, transparent 10%);
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
+  border-radius: 50%;
+  transform: rotate(45deg);
+}
+
+.strategyTitle {
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+.strategyBody {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.draftBtn {
+  background: white;
+  color: #ca7618;
+  border: none;
+  font-weight: 800;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.85rem 1.25rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+  position: relative;
+  z-index: 2;
+}
+
+.draftBtn:hover {
+  transform: translateY(-2px);
+}
+
+
+/* MIDDLE ROW: Historical Election Performance */
+.historyCard {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+.historyHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 3.5rem;
+}
+
+.historyTitleBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.historySub {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--on-surface-variant);
+}
+
+.historyLegend {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.hLegendItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--on-surface);
+}
+
+.hLegendBox {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+}
+
+.hLegendBox.bjp { background: #8f4e00; }
+.hLegendBox.opp { background: #eef0f2; }
+
+/* Custom Bar Chart Layout */
+.chartContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  height: 250px;
+  padding: 0 4rem;
+  border-bottom: 1px solid #e1e3e4;
+  padding-bottom: 1rem;
+}
+
+.chartGroup {
+  display: flex;
+  gap: 0; /* Bars are touching side-by-side */
+  align-items: flex-end;
+  position: relative;
+}
+
+.barCol {
+  width: 45px;
+  border-radius: 2px 2px 0 0;
+}
+
+/* Values based on visual approximation of bars climbing over years */
+.barCol.bjp2014 { height: 110px; background: #cbb38e; }
+.barCol.opp2014 { height: 140px; background: #eef0f2; }
+
+.barCol.bjp2018 { height: 135px; background: #ab7f41; }
+.barCol.opp2018 { height: 115px; background: #eef0f2; }
+
+.barCol.bjp2023 { height: 180px; background: #8f4e00; }
+.barCol.opp2023 { height: 100px; background: #eef0f2; }
+
+.xAxisLabel {
+  position: absolute;
+  bottom: -3.5rem;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.xYear {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--on-surface);
+}
+
+.xYearOrange {
+  color: #ca7618;
+}
+
+.xLabelNode {
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--on-surface-variant);
+  letter-spacing: 0.05em;
+  margin-top: 0.2rem;
+}
+
+.xLabelOrange {
+  color: #ca7618;
+}
+
+/* BOTTOM ACTIONS ROW */
+.bottomActionCards {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.actionBlock {
+  flex: 1;
+  background: #f8f9fa;
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.01);
+}
+
+.blockIconWrapper {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.blockIconWrapper.orange {
+  background: #fdf3e8;
+  color: #ca7618;
+}
+
+.blockIconWrapper.green {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.blockIconWrapper.blue {
+  background: #e0f2fe;
+  color: #0284c7;
+}
+
+.blockTitle {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--on-surface);
+  line-height: 1.2;
+  margin-bottom: 0.75rem;
+}
+
+.blockDesc {
+  font-size: 0.9rem;
+  color: var(--on-surface-variant);
+  line-height: 1.5;
+}
+
+@media (max-width: 1200px) {
+  .topGrid, .bottomActionCards {
+    flex-direction: column;
+  }
+}

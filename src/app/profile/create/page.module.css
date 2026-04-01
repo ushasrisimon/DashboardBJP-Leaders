@@ -1,0 +1,475 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1000px;
+}
+
+/* 1. Header */
+.pageHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.breadcrumbs {
+  font-family: var(--font-display);
+  font-size: 0.65rem;
+  font-weight: 800;
+  color: #c06500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.breadcrumbArrow {
+  color: #8c8c8c;
+}
+
+.breadcrumbCurrent {
+  color: #c06500;
+}
+
+.titleGroup {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.roleChip {
+  background: #f4ede4;
+  color: #57636e;
+  border: 1px solid #c06500;
+  padding: 0.15rem 0.5rem;
+  border-radius: 20px;
+  font-size: 0.6rem;
+  font-family: var(--font-display);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+.roleChip::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background-color: #c06500;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.headerActions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.btnOutline {
+  background: white;
+  color: #191c1d;
+  border: 1px solid #e1e3e4;
+  border-radius: 6px;
+  padding: 0.75rem 1.5rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+}
+
+.btnSolidSaffron {
+  background: #d88100;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.75rem 2rem;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+/* 2. Main Form Card */
+.mainFormCard {
+  background: white;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+  border: 1px solid #f0f1f2;
+}
+
+.fieldLabel {
+  font-family: var(--font-display);
+  font-size: 0.65rem;
+  font-weight: 800;
+  color: #57636e;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.requiredAsterisk {
+  color: #d12c2c;
+}
+
+.detailsGrid {
+  display: grid;
+  grid-template-columns: 1fr 2.5fr;
+  gap: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.portraitSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.portraitPlaceholder {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  background-color: #112a3d;
+  border-radius: 8px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.uploadOverlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: #b76e00;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.cameraCircle {
+  width: 40px;
+  height: 40px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.helperText {
+  color: #8c8c8c;
+  font-size: 0.65rem;
+  text-align: center;
+  margin-top: 1rem;
+  font-style: italic;
+  padding: 0 1rem;
+}
+
+.inputGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2rem;
+  row-gap: 2rem;
+}
+
+.textInput {
+  background: #f9fafa;
+  border: none;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  padding: 1rem;
+  border-radius: 6px;
+  color: #191c1d;
+  width: 100%;
+  outline: none;
+}
+.textInput::placeholder { color: #8c8c8c; }
+
+.inputWithIcon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.inputIcon {
+  position: absolute;
+  left: 1rem;
+  color: #3b4e60;
+}
+
+.textInputWithIcon {
+  background: #f9fafa;
+  border: none;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  padding: 1rem 1rem 1rem 2.75rem;
+  border-radius: 6px;
+  color: #191c1d;
+  width: 100%;
+  outline: none;
+}
+
+.radioGroup {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  height: 48px; /* match input heights */
+}
+
+.radioLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: #191c1d;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.radioActive {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid #c06500;
+  background-color: white;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.radioActive::after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background-color: #c06500;
+  border-radius: 50%;
+}
+
+.radioInactive {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid #e1e3e4;
+  background-color: white;
+}
+
+/* Rich Text Area */
+.richTextEditor {
+  border: 1px solid #f0f1f2;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.richTextToolbar {
+  background: #f9fafa;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 1px solid #f0f1f2;
+}
+
+.toolbarBtn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #191c1d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.toolbarBtn:hover {
+  color: #c06500;
+}
+
+.toolbarDivider {
+  width: 1px;
+  height: 16px;
+  background: #e1e3e4;
+}
+
+.richTextArea {
+  width: 100%;
+  min-height: 150px;
+  border: none;
+  padding: 1rem;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: #191c1d;
+  resize: vertical;
+  outline: none;
+}
+.richTextArea::placeholder { color: #8c8c8c; }
+
+/* 3. Timeline */
+.timelineSection {
+  margin-bottom: 2rem;
+}
+
+.timelineHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.btnAddGreen {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #007a00;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.75rem 1.25rem;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.timelineList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.timelineCard {
+  background: white;
+  border-radius: 6px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+  display: flex;
+  align-items: flex-end;
+  gap: 1.5rem;
+}
+
+.timelineField {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.miniLabel {
+  font-family: var(--font-display);
+  font-size: 0.55rem;
+  font-weight: 800;
+  color: #8c8c8c;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.timelineInput {
+  background: #f9fafa;
+  border: none;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  color: #191c1d;
+  width: 100%;
+  font-weight: 500;
+  outline: none;
+}
+
+.btnTrash {
+  background: transparent;
+  border: none;
+  color: #c9cdd0;
+  cursor: pointer;
+  padding: 0.75rem 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btnTrash:hover {
+  color: #d12c2c;
+}
+
+/* 4. Footer */
+.formFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid #f0f1f2;
+  margin-bottom: 2.5rem;
+}
+
+.footerInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #8c8c8c;
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+.footerActions {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.btnTextBlack {
+  background: transparent;
+  border: none;
+  color: #191c1d;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+/* 5. Summary Utilities */
+.summaryGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.summaryCard {
+  background: #f9fafa;
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.summaryIconBox {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.summaryTitle {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 800;
+  color: #191c1d;
+  margin-bottom: 0.5rem;
+}
+
+.summaryDesc {
+  color: #57636e;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}

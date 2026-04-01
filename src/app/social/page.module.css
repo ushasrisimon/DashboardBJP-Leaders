@@ -1,0 +1,655 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1rem 0;
+}
+
+/* Header Section */
+.pageHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+.headerLeft {
+  display: flex;
+  flex-direction: column;
+}
+
+.breadcrumb {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+  color: #ca7618;
+}
+
+.pageTitle {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--on-surface);
+  line-height: 1.1;
+}
+
+/* Header Floating Stats */
+.headerStatsWrap {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  background: white;
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+  position: relative;
+  z-index: 10;
+}
+
+/* subtle background graphic behind the stats as per mockup */
+.headerStatsWrap::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 150px;
+  height: 150px;
+  background: white;
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  z-index: -1;
+  opacity: 0.6;
+}
+
+.platformIcons {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.pIcon {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.pIcon.x { background: #3b82f6; }   /* Blue */
+.pIcon.fb { background: #4f46e5; }  /* Indigo */
+.pIcon.ig { background: #ec4899; }  /* Pink */
+.pIcon.wa { background: #16a34a; }  /* Green */
+
+.headerStatText {
+  display: flex;
+  flex-direction: column;
+}
+
+.headerStatVal {
+  font-weight: 800;
+  color: var(--on-surface);
+  line-height: 1.2;
+}
+
+.headerStatSub {
+  font-size: 0.65rem;
+  color: var(--on-surface-variant);
+}
+
+
+/* MAIN SPLIT */
+.mainSplit {
+  display: flex;
+  gap: 2rem;
+  align-items: stretch;
+  margin-top: 1rem;
+}
+
+
+/* LEFT PANEL: OMNICHANNEL CREATOR */
+.omniCard {
+  flex: 1.5;
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+  display: flex;
+  flex-direction: column;
+}
+
+.omniHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.omniIconBox {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: #fdf3e8;
+  color: #ca7618;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.omniTitle {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--on-surface);
+}
+
+.editorBox {
+  flex: 1;
+  background: #f8f9fa;
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  position: relative;
+  min-height: 220px;
+  margin-bottom: 2rem;
+  border: 1px solid #f3f4f5;
+}
+
+.editorPlaceholder {
+  color: #a1a1aa;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.attachBtn {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background: white;
+  color: #ca7618;
+  border: 1px solid #e1e3e4;
+  padding: 0.6rem 1.25rem;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  transition: all 0.2s;
+}
+
+.attachBtn:hover {
+  background: #fdf3e8;
+  border-color: #ca7618;
+}
+
+.platformSelectors {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.pSelectBox {
+  flex: 1;
+  background: #f8f9fa;
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: border 0.2s;
+}
+
+.pSelectBox:hover {
+  border-color: #e1e3e4;
+}
+
+.pCheckbox {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  background: white;
+  border: 2px solid #e1e3e4;
+  position: relative;
+  cursor: pointer;
+}
+
+.pCheckbox:checked {
+  background: #ca7618;
+  border-color: #ca7618;
+}
+
+.pCheckbox:checked::after {
+  content: '';
+  position: absolute;
+  top: 1px;
+  left: 5px;
+  width: 4px;
+  height: 9px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.pSelectText {
+  display: flex;
+  flex-direction: column;
+}
+
+.pSelectName {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--on-surface);
+}
+
+.pSelectDesc {
+  font-size: 0.75rem;
+  color: var(--on-surface-variant);
+}
+
+.omniFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footerLeftIcons {
+  display: flex;
+  gap: 1rem;
+  color: #57636e;
+}
+
+.iconBtn {
+  cursor: pointer;
+}
+
+.footerRightActions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.saveDraftText {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--on-surface-variant);
+  cursor: pointer;
+}
+
+.broadcastNowBtn {
+  background: linear-gradient(135deg, #e78820 0%, #ca7618 100%);
+  color: white;
+  border: none;
+  padding: 0.85rem 2rem;
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(202, 118, 24, 0.3);
+  transition: opacity 0.2s;
+}
+
+.broadcastNowBtn:hover {
+  opacity: 0.9;
+}
+
+
+/* RIGHT PANEL: WHATSAPP CAMPAIGN */
+.waCard {
+  flex: 1;
+  background: #0f766e; /* Dark teal/green mimicking whatsapp brand tone */
+  border-radius: var(--radius-lg);
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+.waHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.waHeaderLeft {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.waIconBox {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.2);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.waTitleGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.waTitle {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: white;
+  line-height: 1.2;
+}
+
+.waSub {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.8);
+}
+
+.waStatusChip {
+  background: #86efac;
+  color: #14532d;
+  font-size: 0.6rem;
+  font-weight: 800;
+  padding: 0.35rem 0.75rem;
+  border-radius: 99px;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.waSectionLabel {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.8);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.waDropdown {
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: white;
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius-md);
+  font-size: 0.95rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+
+.waSegmentBox {
+  background: white;
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.segmentLeft {
+  display: flex;
+  flex-direction: column;
+}
+
+.segmentLabel {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--on-surface-variant);
+  text-transform: uppercase;
+}
+
+.segmentVal {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--on-surface);
+}
+
+.waPreviewArea {
+  flex: 1;
+  background: #e6e3df; /* Whatsapp background tone approx */
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+/* Add a subtle tile pattern if desired, skipped for raw layout */
+.previewBubble {
+  background: white;
+  border-radius: 12px;
+  border-top-left-radius: 0;
+  padding: 0.5rem;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Chat bubble tail */
+.previewBubble::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -8px;
+  width: 0;
+  height: 0;
+  border-top: 8px solid white;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+}
+
+.bubbleImgWrap {
+  width: 100%;
+  height: 120px;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 0.75rem;
+}
+
+.bubbleImg {
+  object-fit: cover;
+}
+
+.bubbleTextGroup {
+  padding: 0 0.25rem;
+}
+
+.bubbleHeadline {
+  color: #0d9488;
+  font-weight: 800;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.bubbleBody {
+  font-size: 0.8rem;
+  color: var(--on-surface);
+  line-height: 1.4;
+  margin-bottom: 0.5rem;
+}
+
+.bubbleLink {
+  color: #3b82f6;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.bubbleFooter {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.25rem;
+  padding-right: 0.25rem;
+  margin-top: 0.25rem;
+}
+
+.bubbleTime {
+  font-size: 0.65rem;
+  color: #a1a1aa;
+}
+
+.waSendBtn {
+  background: white;
+  color: #0f766e;
+  border: none;
+  padding: 1.1rem;
+  border-radius: var(--radius-md);
+  font-weight: 800;
+  font-size: 1.05rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.waSendBtn:hover {
+  transform: translateY(-2px);
+}
+
+
+/* BOTTOM: RECENT BROADCAST PERFORMANCE */
+.analyticsSection {
+  background: #f8f9fa;
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  margin-top: 1rem;
+}
+
+.analyticsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.analyticsTitle {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--on-surface);
+}
+
+.viewAllLink {
+  color: #ca7618;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.analyticsTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.analyticsTable th {
+  text-align: left;
+  padding-bottom: 1rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--on-surface-variant);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid #e1e3e4;
+}
+
+.analyticsTable td {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #e1e3e4;
+  vertical-align: middle;
+}
+
+.analyticsTable tr:last-child td {
+  border-bottom: none;
+}
+
+.campNameBlock {
+  display: flex;
+  flex-direction: column;
+}
+
+.campName {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--on-surface);
+}
+
+.campStatusFlow {
+  font-size: 0.75rem;
+  color: var(--on-surface-variant);
+  margin-top: 0.2rem;
+}
+
+.platformsCell {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.smallIcon {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 0.65rem;
+  font-weight: 700;
+}
+
+.smallIcon.blue { background: #3b82f6; }
+.smallIcon.green { background: #16a34a; }
+.smallIcon.pink { background: #ec4899; }
+
+.metricVal {
+  font-weight: 700;
+  color: var(--on-surface);
+  font-size: 1.05rem;
+}
+
+
+.pill {
+  display: inline-flex;
+  padding: 0.35rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.pill.scheduled {
+  background: #e0f2fe;
+  color: #0369a1;
+}
+
+.pill.delivered {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+@media (max-width: 1200px) {
+  .mainSplit {
+    flex-direction: column;
+  }
+}
